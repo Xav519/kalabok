@@ -10,6 +10,7 @@ import interior from "@/assets/interior.jpg";
 import vareniki from "@/assets/vareniki.jpg";
 import borscht from "@/assets/borscht.jpg";
 import napoleon from "@/assets/napoleon.jpg";
+import lagman from "@/assets/lagman.jpg";
 import plovReal from "@/assets/plov.jpg";
 
 export const Route = createFileRoute("/")({
