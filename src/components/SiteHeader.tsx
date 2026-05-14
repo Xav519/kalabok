@@ -33,7 +33,7 @@ export function SiteHeader() {
         </nav>
         <a
           href="tel:+15143340440"
-          className="rounded-md border border-primary/60 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:glow-neon"
+          className="rounded-md border border-primary/60 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
         >
           Order Now
         </a>
