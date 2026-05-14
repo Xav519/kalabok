@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Particles } from "@/components/Particles";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroPlov from "@/assets/hero-plov.jpg";
 import logo from "@/assets/logo.png";
@@ -53,14 +52,15 @@ function Index() {
           alt="Steaming plov on ornate plate"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
-        <Particles count={40} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
+        {/* Candlelight glow */}
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[60vh] w-[60vw] -translate-x-1/2 -translate-y-1/2 candle-glow animate-candle" aria-hidden />
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary glow-neon" />
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               5.0 ★ Local Favorite · 100% Halal
             </span>
             <h1 className="mt-6 font-display text-5xl leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
@@ -73,7 +73,7 @@ function Index() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="tel:+15143340440"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:scale-[1.02] glow-neon"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:bg-accent hover:-translate-y-0.5"
               >
                 Order Now
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -87,7 +87,7 @@ function Index() {
             </div>
           </div>
           <div className="relative hidden md:block">
-            <div className="absolute inset-0 -z-10 rounded-full bg-primary/20 blur-3xl" />
+            <div className="absolute inset-0 -z-10 rounded-full bg-primary/15 blur-3xl" />
             <img
               src={logo}
               alt=""
@@ -101,7 +101,6 @@ function Index() {
 
       {/* ABOUT */}
       <section id="about" className="relative border-t border-border/40 py-28">
-        <Particles count={20} />
         <div className="relative mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-2 md:items-center">
           <img
             src={interior}
@@ -154,7 +153,7 @@ function Index() {
             {mains.map((m) => (
               <article
                 key={m.name}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/60 hover:glow-neon"
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:border-primary/60 hover:-translate-y-1"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -207,7 +206,6 @@ function Index() {
 
       {/* VISIT */}
       <section id="visit" className="relative border-t border-border/40 py-28">
-        <Particles count={20} />
         <div className="relative mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-3">
           {[
             {
