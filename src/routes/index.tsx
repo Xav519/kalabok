@@ -10,6 +10,7 @@ import interior from "@/assets/interior.jpg";
 import vareniki from "@/assets/vareniki.jpg";
 import borscht from "@/assets/borscht.jpg";
 import napoleon from "@/assets/napoleon.jpg";
+import lagman from "@/assets/lagman.jpg";
 import plovReal from "@/assets/plov.jpg";
 
 export const Route = createFileRoute("/")({
@@ -35,7 +36,7 @@ const mains = [
   { name: "Vareniki", desc: "Tender Ukrainian dumplings, potato or cherry.", img: vareniki },
   { name: "Borscht", desc: "Crimson beet soup with deep, rooted flavor.", img: borscht },
   { name: "Manty", desc: "Steamed Central Asian dumplings, juicy and bold.", img: eggplant },
-  { name: "Lagman", desc: "Hand-pulled noodles in spiced lamb broth.", img: spread },
+  { name: "Lagman", desc: "Hand-pulled noodles in spiced lamb broth.", img: lagman },
 ];
 
 const desserts = [
