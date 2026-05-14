@@ -7,6 +7,9 @@ import pelmeniImg from "@/assets/pelmeni.jpg";
 import eggplant from "@/assets/eggplant-rolls.jpg";
 import spread from "@/assets/spread.jpg";
 import interior from "@/assets/interior.jpg";
+import vareniki from "@/assets/vareniki.jpg";
+import borscht from "@/assets/borscht.jpg";
+import napoleon from "@/assets/napoleon.jpg";
 import plovReal from "@/assets/plov.jpg";
 
 export const Route = createFileRoute("/")({
@@ -29,15 +32,15 @@ export const Route = createFileRoute("/")({
 const mains = [
   { name: "Plov", desc: "Slow-cooked rice with lamb, carrots and spices.", img: plovReal },
   { name: "Pelmeni", desc: "Hand-folded dumplings with sour cream and dill.", img: pelmeniImg },
-  { name: "Vareniki", desc: "Tender Ukrainian dumplings, potato or cherry.", img: spread },
-  { name: "Borscht", desc: "Crimson beet soup with deep, rooted flavor.", img: spread },
+  { name: "Vareniki", desc: "Tender Ukrainian dumplings, potato or cherry.", img: vareniki },
+  { name: "Borscht", desc: "Crimson beet soup with deep, rooted flavor.", img: borscht },
   { name: "Manty", desc: "Steamed Central Asian dumplings, juicy and bold.", img: eggplant },
-  { name: "Lagman", desc: "Hand-pulled noodles in spiced lamb broth.", img: plovReal },
+  { name: "Lagman", desc: "Hand-pulled noodles in spiced lamb broth.", img: spread },
 ];
 
 const desserts = [
   { name: "Medovik", desc: "Honey cake — eight layers of slow craft.", img: medovik },
-  { name: "Napoleon", desc: "Crisp pastry leaves bound by silk cream.", img: medovik },
+  { name: "Napoleon", desc: "Crisp pastry leaves bound by silk cream.", img: napoleon },
 ];
 
 function Index() {
@@ -255,13 +258,24 @@ function Index() {
           <div className="rounded-2xl border border-border bg-card/50 p-8 text-center backdrop-blur">
             <h3 className="font-display text-2xl">Order for Delivery</h3>
             <div className="mt-6 flex flex-wrap justify-center gap-4">
-              {["Uber Eats", "DoorDash", "SkipTheDishes"].map((p) => (
+              {[
+                {
+                  name: "Uber Eats",
+                  href: "https://www.ubereats.com/ca/store/kalabok/0o-mUz1iX2CIkvHvKKfAMw?srsltid=AfmBOop5c6XyKM13JKPhGvCgifeIvSHTYDvEOnJ3CBxxTdx5rrQsV9Wn",
+                },
+                {
+                  name: "DoorDash",
+                  href: "https://www.doordash.com/store/kalabok-saint-laurent-32072690/71268146/?srsltid=AfmBOorCCIb5evjVvHun-v3IR5mWhJp4nZ8KT1i7Q9UNqOsbVftcjQBE",
+                },
+              ].map((p) => (
                 <a
-                  key={p}
-                  href="#"
+                  key={p.name}
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-md border border-border px-6 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary"
                 >
-                  {p}
+                  {p.name}
                 </a>
               ))}
             </div>
