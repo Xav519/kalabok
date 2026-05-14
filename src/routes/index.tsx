@@ -32,15 +32,15 @@ export const Route = createFileRoute("/")({
 const mains = [
   { name: "Plov", desc: "Slow-cooked rice with lamb, carrots and spices.", img: plovReal },
   { name: "Pelmeni", desc: "Hand-folded dumplings with sour cream and dill.", img: pelmeniImg },
-  { name: "Vareniki", desc: "Tender Ukrainian dumplings, potato or cherry.", img: spread },
-  { name: "Borscht", desc: "Crimson beet soup with deep, rooted flavor.", img: spread },
+  { name: "Vareniki", desc: "Tender Ukrainian dumplings, potato or cherry.", img: vareniki },
+  { name: "Borscht", desc: "Crimson beet soup with deep, rooted flavor.", img: borscht },
   { name: "Manty", desc: "Steamed Central Asian dumplings, juicy and bold.", img: eggplant },
-  { name: "Lagman", desc: "Hand-pulled noodles in spiced lamb broth.", img: plovReal },
+  { name: "Lagman", desc: "Hand-pulled noodles in spiced lamb broth.", img: spread },
 ];
 
 const desserts = [
   { name: "Medovik", desc: "Honey cake — eight layers of slow craft.", img: medovik },
-  { name: "Napoleon", desc: "Crisp pastry leaves bound by silk cream.", img: medovik },
+  { name: "Napoleon", desc: "Crisp pastry leaves bound by silk cream.", img: napoleon },
 ];
 
 function Index() {
