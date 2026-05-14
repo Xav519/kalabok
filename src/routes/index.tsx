@@ -258,13 +258,24 @@ function Index() {
           <div className="rounded-2xl border border-border bg-card/50 p-8 text-center backdrop-blur">
             <h3 className="font-display text-2xl">Order for Delivery</h3>
             <div className="mt-6 flex flex-wrap justify-center gap-4">
-              {["Uber Eats", "DoorDash", "SkipTheDishes"].map((p) => (
+              {[
+                {
+                  name: "Uber Eats",
+                  href: "https://www.ubereats.com/ca/store/kalabok/0o-mUz1iX2CIkvHvKKfAMw?srsltid=AfmBOop5c6XyKM13JKPhGvCgifeIvSHTYDvEOnJ3CBxxTdx5rrQsV9Wn",
+                },
+                {
+                  name: "DoorDash",
+                  href: "https://www.doordash.com/store/kalabok-saint-laurent-32072690/71268146/?srsltid=AfmBOorCCIb5evjVvHun-v3IR5mWhJp4nZ8KT1i7Q9UNqOsbVftcjQBE",
+                },
+              ].map((p) => (
                 <a
-                  key={p}
-                  href="#"
+                  key={p.name}
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-md border border-border px-6 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary"
                 >
-                  {p}
+                  {p.name}
                 </a>
               ))}
             </div>
