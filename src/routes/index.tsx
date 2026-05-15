@@ -5,6 +5,7 @@ import logo from "@/assets/logo.png";
 import medovik from "@/assets/medovik.jpg";
 import pelmeniImg from "@/assets/pelmeni.jpg";
 import eggplant from "@/assets/eggplant-rolls.jpg";
+import manty from "@/assets/manty.jpg";
 import spread from "@/assets/spread.jpg";
 import interior from "@/assets/interior.jpg";
 import vareniki from "@/assets/vareniki.jpg";
@@ -35,7 +36,7 @@ const mains = [
   { name: "Pelmeni", desc: "Hand-folded dumplings with sour cream and dill.", img: pelmeniImg },
   { name: "Vareniki", desc: "Tender Ukrainian dumplings, potato or cherry.", img: vareniki },
   { name: "Borscht", desc: "Crimson beet soup with deep, rooted flavor.", img: borscht },
-  { name: "Manty", desc: "Steamed Central Asian dumplings, juicy and bold.", img: eggplant },
+  { name: "Manty", desc: "Steamed Central Asian dumplings, juicy and bold.", img: manty },
   { name: "Lagman", desc: "Hand-pulled noodles in spiced lamb broth.", img: lagman },
 ];
 
